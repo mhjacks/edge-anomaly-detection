@@ -40,7 +40,6 @@ clusterGroup:
     ods:
       name: rhods-operator
       channel: stable
-      namespace: redhat-ods-operator
 
     amqbroker-prod:
       name: amq-broker-rhel8
@@ -114,7 +113,6 @@ clusterGroup:
 
     data-science:
       name: data-science
-      namespace: redhat-ods-operator
       project: data-science-proj
       path: charts/hub/data-science
       ignoreDifferences:
