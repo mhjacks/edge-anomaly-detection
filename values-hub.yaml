@@ -14,10 +14,10 @@ clusterGroup:
     - edge-workspace
     - edge-test-all
     - edge-ci
-    - ml-data-science:
+    - ml-development:
         labels:
           app.kubernetes.io/instance: edge-anomaly-detection-hub
-          kubernetes.io/metadata.name: ml-data-science
+          kubernetes.io/metadata.name: ml-development
           argocd.argoproj.io/managed-by: edge-anomaly-detection-hub
           modelmesh-enabled: 'true'
           opendatahub.io/dashboard: 'true'
