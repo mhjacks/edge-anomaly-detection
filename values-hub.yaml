@@ -10,7 +10,6 @@ clusterGroup:
     - hello-world
     - policies
     - openshift-storage
-    - redhat-ods-operator
     - edge-workspace
     - edge-test-all
     - edge-ci
