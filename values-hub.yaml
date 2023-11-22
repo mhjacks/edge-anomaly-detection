@@ -9,7 +9,7 @@ clusterGroup:
     - config-demo
     - hello-world
     - policies
-#    - openshift-storage
+    - openshift-storage
     - redhat-ods-operator:
         operatorGroup: true
         targetNamespaces:
@@ -35,9 +35,9 @@ clusterGroup:
       namespace: open-cluster-management
       channel: release-2.8
 
-#    odf:
-#      name: odf-operator
-#      namespace: openshift-storage
+    odf:
+      name: odf-operator
+      namespace: openshift-storage
 
     ods:
       name: rhods-operator
@@ -96,11 +96,11 @@ clusterGroup:
       project: hub
       path: common/golang-external-secrets
 
-#    storage:
-#      name: storage
-#      namespace: openshift-storage
-#      project: hub
-#      path: charts/hub/data-lake/odf
+    storage:
+      name: storage
+      namespace: openshift-storage
+      project: hub
+      path: charts/hub/data-lake/odf
 
     config-demo:
       name: config-demo
