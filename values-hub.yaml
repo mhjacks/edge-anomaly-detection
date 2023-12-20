@@ -141,8 +141,8 @@ clusterGroup:
       namespace: edge-test-all
       project: hub
       path: charts/hub/edge-anomaly-test
-      plugin:
-        name: helm-with-kustomize
+      extraValueFiles:
+        - /overrides/values-test-imagedata.yaml
 
     pipelines:
       name: pipelines
@@ -216,7 +216,7 @@ clusterGroup:
 #      path: applications/pipeline
 #      repoURL: https://github.com/you/applications.git
 #      targetRevision: stable
-#      overrides:
+#      overrides:kSLNjRmVKpf1
 #      - name: myparam
 #        value: myparam
 #

@@ -6,7 +6,7 @@ metadata:
     template: openjdk18-web-basic-s2i
     app.kubernetes.io/part-of: ManuELA
   name: machine-sensor-2
-  namespace: edge-test-all
+  namespace: manuela-tst-all
 spec:
   replicas: 1
   revisionHistoryLimit: 10
@@ -25,8 +25,8 @@ spec:
     spec:
       containers:
       - name: machine-sensor
-        image: machine-sensor:latest
-        #imagePullPolicy: Always
+        image: {{ .Values.machine_sensor.image_location }}:{{ .Values.machine_sensor.tag }}
+        imagePullPolicy: Always
         ports:
           - containerPort: 8778
             name: jolokia
