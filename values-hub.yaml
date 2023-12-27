@@ -119,10 +119,34 @@ clusterGroup:
       project: hello-world
       path: charts/all/hello-world
 
-    data-science:
+    data-science-cluster:
       name: data-science
+      namespace: redhat-ods-applications
       project: data-science-proj
-      path: charts/hub/data-science
+      path: charts/hub/data-science-cluster
+      ignoreDifferences:
+      - group: apps
+        kind: Deployment
+        jsonPointers:
+        - /spec/replicas
+      - group: route.openshift.io
+        kind: Route
+        jsonPointers:
+        - /status
+      - group: image.openshift.io
+        kind: ImageStream
+        jsonPointers:
+        - /spec/tags
+      - group: apps.openshift.io
+        kind: DeploymentConfig
+        jsonPointers:
+        - /spec/template/spec/containers/0/image
+
+    data-science-project:
+      name: data-science-project
+      namespace: ml-development
+      project: data-science-proj
+      path: charts/hub/data-science-project
       ignoreDifferences:
       - group: apps
         kind: Deployment

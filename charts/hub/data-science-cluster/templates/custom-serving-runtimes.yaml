@@ -2,7 +2,6 @@ kind: Template
 apiVersion: template.openshift.io/v1
 metadata:
   name: triton
-  namespace: redhat-ods-applications
   labels:
     opendatahub.io/dashboard: 'true'
   annotations:
@@ -85,7 +84,6 @@ kind: Template
 apiVersion: template.openshift.io/v1
 metadata:
   name: mlserver
-  namespace: redhat-ods-applications
   labels:
     opendatahub.io/dashboard: 'true'
   annotations:
@@ -159,7 +157,6 @@ kind: Template
 apiVersion: template.openshift.io/v1
 metadata:
   name: torchserve
-  namespace: redhat-ods-applications
   labels:
     opendatahub.io/dashboard: 'true'
   annotations:
