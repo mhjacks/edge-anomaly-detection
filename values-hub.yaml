@@ -52,13 +52,13 @@ clusterGroup:
     amqstreams-prod-dev:
       name: amq-streams
       namespaces: 
-      - ml-data-science
+      - ml-development
       - edge-test-all
 
     camelk-prod-dev:
       name: red-hat-camel-k
       namespaces: 
-      - ml-data-science
+      - ml-development
       - edge-test-all
 
     openshift-pipelines:
