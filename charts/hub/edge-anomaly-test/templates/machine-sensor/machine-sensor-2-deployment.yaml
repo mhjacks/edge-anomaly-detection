@@ -6,7 +6,6 @@ metadata:
     template: openjdk18-web-basic-s2i
     app.kubernetes.io/part-of: ManuELA
   name: machine-sensor-2
-  namespace: manuela-tst-all
 spec:
   replicas: 1
   revisionHistoryLimit: 10
