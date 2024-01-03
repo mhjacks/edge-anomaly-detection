@@ -120,7 +120,7 @@ clusterGroup:
       path: charts/all/hello-world
 
     data-science-cluster:
-      name: data-science
+      name: data-science-cluster
       namespace: redhat-ods-applications
       project: data-science-proj
       path: charts/hub/data-science-cluster
