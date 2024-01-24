@@ -263,3 +263,39 @@ spec:
           secret:
             defaultMode: 420
             secretName: jupyterlab-tls
+---
+apiVersion: objectbucket.io/v1alpha1
+kind: ObjectBucketClaim
+metadata:
+  name: pipeline-bucket
+  namespace: ml-development
+  finalizers:
+    - objectbucket.io/finalizer
+  labels:
+    app: noobaa
+    bucket-provisioner: openshift-storage.noobaa.io-obc
+    noobaa-domain: openshift-storage.noobaa.io
+spec:
+  additionalConfig:
+    bucketclass: noobaa-default-bucket-class
+  bucketName: pipeline-bucket
+  generateBucketName: pipeline-bucket
+  storageClassName: openshift-storage.noobaa.io
+---
+apiVersion: objectbucket.io/v1alpha1
+kind: ObjectBucketClaim
+metadata:
+  name: user-bucket
+  namespace: ml-development
+  finalizers:
+    - objectbucket.io/finalizer
+  labels:
+    app: noobaa
+    bucket-provisioner: openshift-storage.noobaa.io-obc
+    noobaa-domain: openshift-storage.noobaa.io
+spec:
+  additionalConfig:
+    bucketclass: noobaa-default-bucket-class
+  bucketName: user-bucket
+  generateBucketName: user-bucket
+  storageClassName: openshift-storage.noobaa.io
