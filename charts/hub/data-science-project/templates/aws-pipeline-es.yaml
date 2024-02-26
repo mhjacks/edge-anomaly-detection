@@ -22,4 +22,4 @@ spec:
       type: Opaque
   dataFrom:
     - extract:
-      key: {{ .Values.awsPipelinesSecret.key }}
+        key: {{ .Values.awsPipelinesSecret.key }}
