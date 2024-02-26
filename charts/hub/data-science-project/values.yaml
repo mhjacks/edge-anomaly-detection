@@ -1,1 +1,10 @@
+global:
+  secretStore:
+    backend: vault
+    name: vault-backend
+    kind: clusterSecretStore
+
+awsPipelinesSecret:
+  key: secret/data/hub/aws-connection-pipelines
+
 clusterdomainurl: cluster.example.com
