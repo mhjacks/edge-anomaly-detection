@@ -1,9 +1,6 @@
-apiVersion: ocs.openshift.io/v1
-kind: StorageCluster
+apiVersion: odf.openshift.io/v1alpha1
+kind: StorageSystem
 metadata:
-  annotations:
-    uninstall.ocs.openshift.io/cleanup-policy: delete
-    uninstall.ocs.openshift.io/mode: graceful
   finalizers:
     - storagesystem.odf.openshift.io
   name: ocs-storagecluster-storagesystem
