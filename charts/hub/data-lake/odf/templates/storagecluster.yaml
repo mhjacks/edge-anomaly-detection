@@ -1,11 +1,47 @@
-apiVersion: odf.openshift.io/v1alpha1
-kind: StorageSystem
+apiVersion: ocs.openshift.io/v1
+kind: StorageCluster
 metadata:
-  finalizers:
-    - storagesystem.odf.openshift.io
-  name: ocs-storagecluster-storagesystem
-  namespace: {{ .Values.ocs.namespace }}
-spec:
-  kind: storagecluster.ocs.openshift.io/v1
+  annotations:
+    uninstall.ocs.openshift.io/cleanup-policy: delete
+    uninstall.ocs.openshift.io/mode: graceful
   name: ocs-storagecluster
   namespace: openshift-storage
+  finalizers:
+    - storagecluster.ocs.openshift.io
+spec:
+  arbiter: {}
+  encryption:
+    kms: {}
+  externalStorage: {}
+  managedResources:
+    cephObjectStoreUsers: {}
+    cephCluster: {}
+    cephBlockPools: {}
+    cephNonResilientPools: {}
+    cephObjectStores: {}
+    cephFilesystems: {}
+    cephRBDMirror: {}
+    cephToolbox: {}
+    cephDashboard: {}
+    cephConfig: {}
+  mirroring: {}
+  storageDeviceSets:
+    - config: {}
+      resources: {}
+      placement: {}
+      name: ocs-deviceset
+      dataPVCTemplate:
+        metadata: {}
+        spec:
+          accessModes:
+            - ReadWriteOnce
+          resources:
+            requests:
+              storage: 500Gi
+          storageClassName: gp3-csi
+          volumeMode: Block
+        status: {}
+      count: 1
+      replica: 3
+      portable: true
+      preparePlacement: {}
