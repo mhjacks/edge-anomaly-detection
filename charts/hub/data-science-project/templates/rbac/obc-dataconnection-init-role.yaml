@@ -1,0 +1,16 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  annotations:
+    argocd.argoproj.io/sync-wave: "1"
+  name: obc-dataconnection-init
+rules:
+  - apiGroups:
+      - objectbucket.io/v1alpha
+    resources:
+      - secret
+      - ObjectBucketClaim
+    verbs:
+      - get
+      - list
+      - create
