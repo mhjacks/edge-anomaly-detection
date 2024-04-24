@@ -6,8 +6,15 @@ rules:
   - apiGroups:
       - objectbucket.io/v1alpha
     resources:
-      - secret
       - ObjectBucketClaim
+    verbs:
+      - get
+      - list
+      - create
+  - apiGroups:
+      - v1
+    resources:
+      - secret
     verbs:
       - get
       - list
