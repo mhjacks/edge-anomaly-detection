@@ -3,5 +3,3 @@ kind: ServiceAccount
 metadata:
   name: obc-dataconnection-init
   namespace: ml-development
-  annotations:
-    argocd.argoproj.io/sync-wave: "1"
