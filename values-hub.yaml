@@ -107,18 +107,6 @@ clusterGroup:
       project: hub
       path: charts/hub/data-lake/odf
 
-    config-demo:
-      name: config-demo
-      namespace: config-demo
-      project: config-demo
-      path: charts/all/config-demo
-
-    hello-world:
-      name: hello-world
-      namespace: hello-world
-      project: hello-world
-      path: charts/all/hello-world
-
     data-science-cluster:
       name: data-science-cluster
       namespace: redhat-ods-applications
